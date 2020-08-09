@@ -62,11 +62,16 @@ def featured_image(browser):
 
     return img_url
 
-# Mars facts
-df = pd.read_html('http://space-facts.com/mars/')[0]
-df.columns=['description', 'value']
-df.set_index('description', inplace=True)
+def mars_facts():
+    try: 
+        # Mars facts: use pandas 'read_html' f(x) to scrape facts into DF
+        df = pd.read_html('http://space-facts.com/mars/')[0]
+    except BaseException:
+        return None
+    # assigning columns and setting index
+    df.columns=['description', 'value']
+    df.set_index('description', inplace=True)
 
-df.to_html()
+    return df.to_html()
 
 browser.quit()
