@@ -1,5 +1,3 @@
-# To add a new cell, type '# %%'
-# To add a new markdown cell, type '# %% [markdown]'
 # %%
 # Import Splinter and BeautifulSoup
 from splinter import Browser
@@ -47,25 +45,21 @@ news_p
 url = 'https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars'
 browser.visit(url)
 
-
 # %%
 # Find and click the full image button
 full_image_elem = browser.find_by_id('full_image')
 full_image_elem.click()
 
-
 # %%
-# Find the more info button and click that
+# Find more info button and clcik
 browser.is_element_present_by_text('more info', wait_time=1)
 more_info_elem = browser.links.find_by_partial_text('more info')
 more_info_elem.click()
-
 
 # %%
 # Parse the resulting html with soup
 html = browser.html
 img_soup = soup(html, 'html.parser')
-
 
 # %%
 # Find the relative image url
@@ -80,21 +74,12 @@ img_url
 
 
 # %%
+# Mars facts
 df = pd.read_html('http://space-facts.com/mars/')[0]
 df.columns=['description', 'value']
 df.set_index('description', inplace=True)
 df
-
-
 # %%
 df.to_html()
-
-
 # %%
 browser.quit()
-
-
-# %%
-
-
-
