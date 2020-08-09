@@ -1,11 +1,8 @@
-# %%
-# Import Splinter and BeautifulSoup
+# Import Splinter, Pandas and BeautifulSoup
 from splinter import Browser
 from bs4 import BeautifulSoup as soup
 import pandas as pd
 
-
-# %%
 executable_path = {'executable_path': 'chromedriver.exe'}
 browser = Browser('chrome', **executable_path, headless=False)
 
