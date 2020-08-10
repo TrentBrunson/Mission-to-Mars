@@ -18,7 +18,7 @@ def scrape():
    mars = mongo.db.mars
    mars_data = scraping.scrape_all()
    mars.update({}, mars_data, upsert=True)
-   return "Scraping Successful!"
+   return render_template("scrape.html")
 
 if __name__ == "__main__":
    app.run()
