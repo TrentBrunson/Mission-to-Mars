@@ -85,7 +85,7 @@ def mars_facts():
     # assigning columns and setting index
     df.columns=['description', 'value']
     df.set_index('description', inplace=True)
-    return df.to_html()
+    return df.to_html(classes="table table-striped table-dark")
 
 if __name__ == "__main__":
     # If running as script, print scraped data
