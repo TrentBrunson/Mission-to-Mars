@@ -2,6 +2,9 @@
 practice.ipynb
 chromedriver.exe
 test.html
+tester.py
+apptest.py
+marsHemFx.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
