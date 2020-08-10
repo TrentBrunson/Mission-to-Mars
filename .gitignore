@@ -1,7 +1,6 @@
 # adding files to ignore
 practice.ipynb
 chromedriver.exe
-index.html
 test.html
 
 # Byte-compiled / optimized / DLL files
