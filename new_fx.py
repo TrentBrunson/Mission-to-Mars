@@ -1,3 +1,5 @@
+# --- testing f(x) --- 
+
 # Import Splinter, Pandas and BeautifulSoup
 from splinter import Browser
 from bs4 import BeautifulSoup as soup
