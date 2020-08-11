@@ -40,6 +40,20 @@
         </div>
       </div>
     </div>
+    <!-- Mars Hemispheres -->
+    <div class="row" id="mars-hemis">
+      <div class="col-md-12 text-center box body">
+        <h3>Mars Hemispheres</h3>
+        {%for item in mars.mars_hemi%}
+        <div class="cold-md-3 text-center">
+          <h4>{{item['title']}}</h4>
+          <a href="{{item['img_url']}}">
+            <img src="{{item['img_url']}}">
+          </a>
+        </div>
+        {%endfor%}
+      </div>
+    </div> 
 </body>
 </html>
 
