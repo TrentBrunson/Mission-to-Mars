@@ -5,5 +5,5 @@ Web scraping data about the next Mission to Mars
 
 # Portfolio example  
 ---
-![](portfolio.png)
+![](/images/portfolio.png)
 (https://github.com/TrentBrunson/Portfolio.git)
